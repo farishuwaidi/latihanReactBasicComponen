@@ -6,6 +6,9 @@ import Page404 from "./pages/Page404";
 
 
 import { BrowserRouter, Routes, Link, Route,Navigate } from "react-router-dom";
+import Latihan from "./pages/Latihan";
+import Tables from "./pages/Tables";
+import Hitung from "./pages/Hitung";
 
 const App = () => {
   return (
@@ -25,6 +28,15 @@ const App = () => {
             <li>
               <Link to="/product/1">Product Detail</Link>
             </li>
+            <li>
+              <Link to="/latihan">latihan</Link>
+            </li>
+            <li>
+              <Link to="/table">tables</Link>
+            </li>
+            <li>
+              <Link to="/hitung">Hitung</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -33,6 +45,9 @@ const App = () => {
           <Route path="/product-list" element={<ProductList />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product/:id" element={<DetailProduct />} />
+          <Route path="/latihan" element={<Latihan />} />
+          <Route path="/table" element={<Tables />} />
+          <Route path="/hitung" element={<Hitung />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
